@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d23d6562fca1646818676b24d6e7a5, type: 3}
+  m_Name: NativeAndroidDebugger
+  m_EditorClassIdentifier: 
+  projectName: VPS
+  windowPosition:
+    serializedVersion: 2
+    x: 24.666668
+    y: 63.333336
+    width: 1693.3334
+    height: 756.3334
+  passedTheWelcomeScreen: 1
+  currentTab: 0
+  dontShowWarningBeforeConnect: 0
+  ip0: 192
+  ip1: 168
+  ip2: 1
+  ip3: 120
+  autoUpdateListOfConnectedDevices: 1
+  sdkPath: C:\Program Files\Unity\Hub\Editor\2021.3.12f1\Editor\Data\PlaybackEngines\AndroidPlayer\SDK

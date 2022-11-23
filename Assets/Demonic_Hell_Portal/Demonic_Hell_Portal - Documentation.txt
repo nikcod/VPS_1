@@ -1,0 +1,14 @@
+Load "Demonic_Hell_Portal.unity" for an example scene, or simply drag the Demonic Portal effect from the Prefab folder (in the Project window) into the Hierarchy window.
+
+Click the left mouse button to trigger the portal.
+
+Note that when using the portal prefab you should set the asset to the same position on the Y axis as the ground; this ensures the depth mask sits just above the ground surface.
+
+To avoid sorting issues with the particles (especially with the pentagon symbol not showing clearing on the ground), it is advisable to turn off Soft Particles. This setting can be found under the menu Edit -> Project Settings -> Quality
+
+Have fun!
+
+Thanks for purchasing this asset - please consider rating or writing a review about it. If you have any questions then don't hesitate to get in touch at bendurrant@rivermillstudios.com 
+
+If you use this or any other Rivermill Studios assets in your games then we'd love to know (and help you promote them!).
+

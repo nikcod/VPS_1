@@ -1,0 +1,136 @@
+fileFormatVersion: 2
+guid: 037642dc07b0de54682d4c44c1e43fb5
+timeCreated: 1536165199
+licenseType: Store
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Demonic_Portal_Anim
+    100002: //RootNode
+    100004: Demonic_Portal_DepthMask
+    100006: Demonic_Portal_Edge_Glow
+    100008: Demonic_Portal_Edge_Glow_B
+    100010: Demonic_Portal_Edge_Scorch
+    100012: Demonic_Portal_Sides
+    100014: joint1
+    100016: joint10
+    100018: joint11
+    100020: joint12
+    100022: joint13
+    100024: joint2
+    100026: joint3
+    100028: joint4
+    100030: joint5
+    100032: joint6
+    100034: joint7
+    100036: joint8
+    100038: joint9
+    100040: transform2
+    400000: Demonic_Portal_Anim
+    400002: //RootNode
+    400004: Demonic_Portal_DepthMask
+    400006: Demonic_Portal_Edge_Glow
+    400008: Demonic_Portal_Edge_Glow_B
+    400010: Demonic_Portal_Edge_Scorch
+    400012: Demonic_Portal_Sides
+    400014: joint1
+    400016: joint10
+    400018: joint11
+    400020: joint12
+    400022: joint13
+    400024: joint2
+    400026: joint3
+    400028: joint4
+    400030: joint5
+    400032: joint6
+    400034: joint7
+    400036: joint8
+    400038: joint9
+    400040: transform2
+    4300000: Demonic_Portal_DepthMask
+    4300002: Demonic_Portal_Sides
+    4300004: Demonic_Portal_Edge_Scorch
+    4300006: Demonic_Portal_Edge_Glow_B
+    4300008: Demonic_Portal_Edge_Glow
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Demonic_Portal_DepthMask
+    13700002: Demonic_Portal_Edge_Glow
+    13700004: Demonic_Portal_Edge_Glow_B
+    13700006: Demonic_Portal_Edge_Scorch
+    13700008: Demonic_Portal_Sides
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
