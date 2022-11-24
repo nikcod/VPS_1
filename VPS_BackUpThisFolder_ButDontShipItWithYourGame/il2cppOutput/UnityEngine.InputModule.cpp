@@ -163,7 +163,6 @@ struct IntPtr_t_StaticFields
 };
 
 // UnityEngineInternal.Input.NativeInputEventBuffer
-#pragma pack(push, tp, 1)
 struct NativeInputEventBuffer_t4EE5873AD7998E0E83C9F8585C338AB14C9101FD 
 {
 	union
@@ -235,7 +234,6 @@ struct NativeInputEventBuffer_t4EE5873AD7998E0E83C9F8585C338AB14C9101FD
 		uint8_t NativeInputEventBuffer_t4EE5873AD7998E0E83C9F8585C338AB14C9101FD__padding[20];
 	};
 };
-#pragma pack(pop, tp)
 
 // System.Void
 struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915 

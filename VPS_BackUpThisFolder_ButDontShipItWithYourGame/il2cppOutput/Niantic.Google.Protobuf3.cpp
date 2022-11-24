@@ -486,7 +486,6 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=44
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D44_tE751EAE5DE75366B1D7948FE11EC39804BFA95DA 
 {
 	union
@@ -500,7 +499,6 @@ struct __StaticArrayInitTypeSizeU3D44_tE751EAE5DE75366B1D7948FE11EC39804BFA95DA
 		uint8_t __StaticArrayInitTypeSizeU3D44_tE751EAE5DE75366B1D7948FE11EC39804BFA95DA__padding[44];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>
 struct U3CPrivateImplementationDetailsU3E_tF4AD1452FF29CE9241494F9FD7103CF3AFAE3426  : public RuntimeObject

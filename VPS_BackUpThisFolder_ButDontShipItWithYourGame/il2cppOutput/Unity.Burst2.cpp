@@ -673,7 +673,6 @@ struct v64_t9C4037532D386FF1E9B95E5FBD01FEF472AC1F96
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=1024
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D1024_tF7D86A590314DC7B01BB492137ABC5940F263469 
 {
 	union
@@ -687,10 +686,8 @@ struct __StaticArrayInitTypeSizeU3D1024_tF7D86A590314DC7B01BB492137ABC5940F26346
 		uint8_t __StaticArrayInitTypeSizeU3D1024_tF7D86A590314DC7B01BB492137ABC5940F263469__padding[1024];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=256
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D256_tFFE4CE163BD2DCEAA09662C2BCC33B3C37AB0D22 
 {
 	union
@@ -704,10 +701,8 @@ struct __StaticArrayInitTypeSizeU3D256_tFFE4CE163BD2DCEAA09662C2BCC33B3C37AB0D22
 		uint8_t __StaticArrayInitTypeSizeU3D256_tFFE4CE163BD2DCEAA09662C2BCC33B3C37AB0D22__padding[256];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=3
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D3_t2857C07F0A23FB025DA0D81FCD2BE07B4ADCC026 
 {
 	union
@@ -721,10 +716,8 @@ struct __StaticArrayInitTypeSizeU3D3_t2857C07F0A23FB025DA0D81FCD2BE07B4ADCC026
 		uint8_t __StaticArrayInitTypeSizeU3D3_t2857C07F0A23FB025DA0D81FCD2BE07B4ADCC026__padding[3];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=32
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D32_tF5E240ACF4B30B5A5F8C77E9E49CC2F8559D76D9 
 {
 	union
@@ -738,10 +731,8 @@ struct __StaticArrayInitTypeSizeU3D32_tF5E240ACF4B30B5A5F8C77E9E49CC2F8559D76D9
 		uint8_t __StaticArrayInitTypeSizeU3D32_tF5E240ACF4B30B5A5F8C77E9E49CC2F8559D76D9__padding[32];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=512
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D512_t85E24EB18ABD7C2D79C6AF46F140D4EA5FBD1475 
 {
 	union
@@ -755,7 +746,6 @@ struct __StaticArrayInitTypeSizeU3D512_t85E24EB18ABD7C2D79C6AF46F140D4EA5FBD1475
 		uint8_t __StaticArrayInitTypeSizeU3D512_t85E24EB18ABD7C2D79C6AF46F140D4EA5FBD1475__padding[512];
 	};
 };
-#pragma pack(pop, tp)
 
 // Unity.Burst.Intrinsics.X86/Sse4_2/StrBoolArray/<Bits>e__FixedBuffer
 struct U3CBitsU3Ee__FixedBuffer_tFED81968B5AEB075B5560B55A16A31C5F01A83BD 

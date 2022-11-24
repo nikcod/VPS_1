@@ -6229,10 +6229,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetVector_m22B010D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextureSlotManager_IndexOf_m53C156E4C78E731B3035E593E64C2AF517BC9091 (TextureSlotManager_tB1F8E620AE296DE3728FAAFBE3CC85D2A176928D* __this, TextureId_tFF4B4AAE53408AB10B0B89CCA5F7B50CF2535E58 ___id0, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.UIElements.UIR.TextureSlotManager::get_FreeSlots()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t TextureSlotManager_get_FreeSlots_m07D624EAB6ED9D3B1F4B4EF33DB2FAB1545871D2_inline (TextureSlotManager_tB1F8E620AE296DE3728FAAFBE3CC85D2A176928D* __this, const RuntimeMethod* method) ;
-// System.Int32 System.Math::Max(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Max_m530EBA549AFD98CFC2BD29FE86C6376E67DF11CF (int32_t ___val10, int32_t ___val21, const RuntimeMethod* method) ;
-// System.Int32 System.Math::Min(System.Int32,System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Min_m53C488772A34D53917BCA2A491E79A0A5356ED52 (int32_t ___val10, int32_t ___val21, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.UIR.UIRenderDevice::ApplyDrawCommandState(UnityEngine.UIElements.UIR.RenderChainCommand,System.Int32,UnityEngine.Material,System.Boolean,System.Boolean,UnityEngine.UIElements.UIR.UIRenderDevice/EvaluationState&)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void UIRenderDevice_ApplyDrawCommandState_m5585C7D69A031B120216ED74C92237E55C97A4A4_inline (UIRenderDevice_t59628CBA89B4617E832C2B270E1C1A3931D01302* __this, RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* ___cmd0, int32_t ___textureSlot1, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___newMat2, bool ___newMatDiffers3, bool ___newFontDiffers4, EvaluationState_t91A908747DD184A56AA6402529B965E07E555567* ___st5, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.UIR.UIRenderDevice::ApplyBatchState(UnityEngine.UIElements.UIR.UIRenderDevice/EvaluationState&,System.Boolean)
@@ -13024,7 +13020,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIRenderDevice_EvaluateChain_mAF7788E8FF
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_RemoveAt_mD461DC585ED2CF965C6FABF04A941287186E0354_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Count_m48BBB83C5F748E6E6FF0731C3682092DEA6A7173_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456_RuntimeMethod_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_get_Length_mC069C9254C3F61C678293E03E3E7C51F245F52E9_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NativeSlice_1_get_Length_mED822A5A5476BEBA72E429C395644A7B41F78F50_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13046,25 +13041,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIRenderDevice_EvaluateChain_mAF7788E8FF
 	DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 V_7;
 	memset((&V_7), 0, sizeof(V_7));
 	int32_t V_8 = 0;
-	int32_t V_9 = 0;
-	EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 V_10;
-	memset((&V_10), 0, sizeof(V_10));
+	EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 V_9;
+	memset((&V_9), 0, sizeof(V_9));
+	bool V_10 = false;
 	bool V_11 = false;
 	bool V_12 = false;
 	bool V_13 = false;
 	bool V_14 = false;
 	bool V_15 = false;
-	bool V_16 = false;
-	EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 V_17;
+	EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 V_16;
+	memset((&V_16), 0, sizeof(V_16));
+	State_tC241510131965D8DE1919EB16A3650E397E5AEAB V_17;
 	memset((&V_17), 0, sizeof(V_17));
-	State_tC241510131965D8DE1919EB16A3650E397E5AEAB V_18;
-	memset((&V_18), 0, sizeof(V_18));
+	bool V_18 = false;
 	bool V_19 = false;
 	bool V_20 = false;
 	bool V_21 = false;
-	bool V_22 = false;
-	int32_t V_23 = 0;
-	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* V_24 = NULL;
+	int32_t V_22 = 0;
+	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* V_23 = NULL;
+	bool V_24 = false;
 	bool V_25 = false;
 	bool V_26 = false;
 	bool V_27 = false;
@@ -13078,25 +13073,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIRenderDevice_EvaluateChain_mAF7788E8FF
 	bool V_35 = false;
 	bool V_36 = false;
 	bool V_37 = false;
-	bool V_38 = false;
-	int32_t V_39 = 0;
-	bool V_40 = false;
-	bool V_41 = false;
+	int32_t V_38 = 0;
+	bool V_39 = false;
+	int32_t V_40 = 0;
+	int32_t V_41 = 0;
 	int32_t V_42 = 0;
-	bool V_43 = false;
+	int32_t V_43 = 0;
 	bool V_44 = false;
-	bool V_45 = false;
+	int32_t V_45 = 0;
 	bool V_46 = false;
 	bool V_47 = false;
 	bool V_48 = false;
 	bool V_49 = false;
-	int32_t V_50 = 0;
+	bool V_50 = false;
 	bool V_51 = false;
 	bool V_52 = false;
-	bool V_53 = false;
+	int32_t V_53 = 0;
 	bool V_54 = false;
-	int32_t V_55 = 0;
+	bool V_55 = false;
 	bool V_56 = false;
+	bool V_57 = false;
+	int32_t V_58 = 0;
+	bool V_59 = false;
 	int32_t G_B4_0 = 0;
 	int32_t G_B18_0 = 0;
 	uint32_t* G_B18_1 = NULL;
@@ -13136,8 +13134,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIRenderDevice_EvaluateChain_mAF7788E8FF
 		TextureSlotManager_Reset_m43FECB6D32D307D151C8173B6223C7E2BF4484F2(L_7, NULL);
 		bool L_8;
 		L_8 = UIRenderDevice_get_fullyCreated_m1026CE6BDC467904FCCB7BAB9C8C10F53902D3EA(__this, NULL);
-		V_11 = L_8;
-		bool L_9 = V_11;
+		V_10 = L_8;
+		bool L_9 = V_10;
 		if (!L_9)
 		{
 			goto IL_0139;
@@ -13166,8 +13164,8 @@ IL_006b:
 
 IL_006c:
 	{
-		V_12 = (bool)G_B4_0;
-		bool L_14 = V_12;
+		V_11 = (bool)G_B4_0;
+		bool L_14 = V_11;
 		if (!L_14)
 		{
 			goto IL_008e;
@@ -13191,8 +13189,8 @@ IL_008e:
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
 		L_21 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_20, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_13 = L_21;
-		bool L_22 = V_13;
+		V_12 = L_21;
+		bool L_22 = V_12;
 		if (!L_22)
 		{
 			goto IL_00af;
@@ -13213,8 +13211,8 @@ IL_00af:
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
 		L_27 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		V_14 = L_27;
-		bool L_28 = V_14;
+		V_13 = L_27;
+		bool L_28 = V_13;
 		if (!L_28)
 		{
 			goto IL_00d0;
@@ -13233,8 +13231,8 @@ IL_00d0:
 	{
 		int32_t L_32;
 		L_32 = NativeSlice_1_get_Length_mC069C9254C3F61C678293E03E3E7C51F245F52E9((&___transforms6), NativeSlice_1_get_Length_mC069C9254C3F61C678293E03E3E7C51F245F52E9_RuntimeMethod_var);
-		V_15 = (bool)((((int32_t)L_32) > ((int32_t)0))? 1 : 0);
-		bool L_33 = V_15;
+		V_14 = (bool)((((int32_t)L_32) > ((int32_t)0))? 1 : 0);
+		bool L_33 = V_14;
 		if (!L_33)
 		{
 			goto IL_00f3;
@@ -13253,8 +13251,8 @@ IL_00f3:
 	{
 		int32_t L_37;
 		L_37 = NativeSlice_1_get_Length_mED822A5A5476BEBA72E429C395644A7B41F78F50((&___clipRects7), NativeSlice_1_get_Length_mED822A5A5476BEBA72E429C395644A7B41F78F50_RuntimeMethod_var);
-		V_16 = (bool)((((int32_t)L_37) > ((int32_t)0))? 1 : 0);
-		bool L_38 = V_16;
+		V_15 = (bool)((((int32_t)L_37) > ((int32_t)0))? 1 : 0);
+		bool L_38 = V_15;
 		if (!L_38)
 		{
 			goto IL_0116;
@@ -13299,33 +13297,32 @@ IL_0139:
 		V_6 = 0;
 		il2cpp_codegen_initobj((&V_7), sizeof(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4));
 		V_8 = (-1);
-		V_9 = 0;
-		il2cpp_codegen_initobj((&V_17), sizeof(EvaluationState_t91A908747DD184A56AA6402529B965E07E555567));
+		il2cpp_codegen_initobj((&V_16), sizeof(EvaluationState_t91A908747DD184A56AA6402529B965E07E555567));
 		MaterialPropertyBlock_t2308669579033A857EFE6E4831909F638B27411D* L_50 = ___stateMatProps8;
-		(&V_17)->___stateMatProps_0 = L_50;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_17)->___stateMatProps_0), (void*)L_50);
+		(&V_16)->___stateMatProps_0 = L_50;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_16)->___stateMatProps_0), (void*)L_50);
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_51 = ___defaultMat2;
-		(&V_17)->___defaultMat_1 = L_51;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_17)->___defaultMat_1), (void*)L_51);
-		il2cpp_codegen_initobj((&V_18), sizeof(State_tC241510131965D8DE1919EB16A3650E397E5AEAB));
+		(&V_16)->___defaultMat_1 = L_51;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_16)->___defaultMat_1), (void*)L_51);
+		il2cpp_codegen_initobj((&V_17), sizeof(State_tC241510131965D8DE1919EB16A3650E397E5AEAB));
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_52 = ___initialMat1;
-		(&V_18)->___material_0 = L_52;
-		Il2CppCodeGenWriteBarrier((void**)(&(&V_18)->___material_0), (void*)L_52);
-		State_tC241510131965D8DE1919EB16A3650E397E5AEAB L_53 = V_18;
-		(&V_17)->___curState_2 = L_53;
-		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_17)->___curState_2))->___material_0), (void*)NULL);
+		(&V_17)->___material_0 = L_52;
+		Il2CppCodeGenWriteBarrier((void**)(&(&V_17)->___material_0), (void*)L_52);
+		State_tC241510131965D8DE1919EB16A3650E397E5AEAB L_53 = V_17;
+		(&V_16)->___curState_2 = L_53;
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_16)->___curState_2))->___material_0), (void*)NULL);
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
-		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_17)->___curState_2))->___font_1), (void*)NULL);
+		Il2CppCodeGenWriteBarrier((void**)&(((&(&V_16)->___curState_2))->___font_1), (void*)NULL);
 		#endif
-		(&V_17)->___mustApplyCommonBlock_5 = (bool)1;
-		(&V_17)->___mustApplyStateBlock_6 = (bool)1;
-		(&V_17)->___mustApplyStencil_7 = (bool)1;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_54 = V_17;
-		V_10 = L_54;
-		goto IL_072f;
+		(&V_16)->___mustApplyCommonBlock_5 = (bool)1;
+		(&V_16)->___mustApplyStateBlock_6 = (bool)1;
+		(&V_16)->___mustApplyStencil_7 = (bool)1;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_54 = V_16;
+		V_9 = L_54;
+		goto IL_0723;
 	}
 
-IL_01b7:
+IL_01b4:
 	{
 		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_55 = (&__this->___m_DrawStats_13);
 		uint32_t* L_56 = (&L_55->___commandCount_2);
@@ -13345,63 +13342,63 @@ IL_01b7:
 		{
 			G_B18_0 = L_62;
 			G_B18_1 = L_61;
-			goto IL_01e0;
+			goto IL_01dd;
 		}
 	}
 	{
 		G_B19_0 = 0;
 		G_B19_1 = G_B17_0;
 		G_B19_2 = G_B17_1;
-		goto IL_01e1;
+		goto IL_01de;
 	}
 
-IL_01e0:
+IL_01dd:
 	{
 		G_B19_0 = 1;
 		G_B19_1 = G_B18_0;
 		G_B19_2 = G_B18_1;
 	}
 
-IL_01e1:
+IL_01de:
 	{
 		*((int32_t*)G_B19_2) = (int32_t)((int32_t)il2cpp_codegen_add(G_B19_1, G_B19_0));
 		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_65 = V_7;
 		int32_t L_66 = L_65.___indexCount_1;
 		if ((((int32_t)L_66) <= ((int32_t)0)))
 		{
-			goto IL_01f6;
+			goto IL_01f3;
 		}
 	}
 	{
 		int32_t L_67 = V_6;
 		int32_t L_68 = V_2;
 		G_B22_0 = ((((int32_t)L_67) == ((int32_t)((int32_t)il2cpp_codegen_subtract(L_68, 1))))? 1 : 0);
-		goto IL_01f7;
+		goto IL_01f4;
 	}
 
-IL_01f6:
+IL_01f3:
 	{
 		G_B22_0 = 0;
 	}
 
-IL_01f7:
+IL_01f4:
 	{
-		V_19 = (bool)G_B22_0;
+		V_18 = (bool)G_B22_0;
+		V_19 = (bool)0;
 		V_20 = (bool)0;
 		V_21 = (bool)0;
-		V_22 = (bool)0;
-		V_23 = (-1);
-		V_24 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
+		V_22 = (-1);
+		V_23 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
+		V_24 = (bool)0;
 		V_25 = (bool)0;
-		V_26 = (bool)0;
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_69 = ___head0;
 		NullCheck(L_69);
 		int32_t L_70 = L_69->___type_5;
-		V_27 = (bool)((((int32_t)L_70) == ((int32_t)0))? 1 : 0);
-		bool L_71 = V_27;
+		V_26 = (bool)((((int32_t)L_70) == ((int32_t)0))? 1 : 0);
+		bool L_71 = V_26;
 		if (!L_71)
 		{
-			goto IL_03a1;
+			goto IL_039e;
 		}
 	}
 	{
@@ -13414,16 +13411,16 @@ IL_01f7:
 		L_75 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_74, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (L_75)
 		{
-			goto IL_0237;
+			goto IL_0234;
 		}
 	}
 	{
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_76 = ___defaultMat2;
 		G_B26_0 = L_76;
-		goto IL_0242;
+		goto IL_023f;
 	}
 
-IL_0237:
+IL_0234:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_77 = ___head0;
 		NullCheck(L_77);
@@ -13432,54 +13429,54 @@ IL_0237:
 		G_B26_0 = L_79;
 	}
 
-IL_0242:
+IL_023f:
 	{
-		V_24 = G_B26_0;
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_80 = V_24;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_81 = V_10;
+		V_23 = G_B26_0;
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_80 = V_23;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_81 = V_9;
 		State_tC241510131965D8DE1919EB16A3650E397E5AEAB L_82 = L_81.___curState_2;
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_83 = L_82.___material_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_84;
 		L_84 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_80, L_83, NULL);
-		V_28 = L_84;
-		bool L_85 = V_28;
+		V_27 = L_84;
+		bool L_85 = V_27;
 		if (!L_85)
 		{
-			goto IL_026b;
+			goto IL_0268;
 		}
 	}
 	{
-		V_22 = (bool)1;
-		V_25 = (bool)1;
-		V_20 = (bool)1;
 		V_21 = (bool)1;
+		V_24 = (bool)1;
+		V_19 = (bool)1;
+		V_20 = (bool)1;
 	}
 
-IL_026b:
+IL_0268:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_86 = ___head0;
 		NullCheck(L_86);
 		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_87 = L_86->___mesh_7;
 		NullCheck(L_87);
 		Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9* L_88 = L_87->___allocPage_4;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_89 = V_10;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_89 = V_9;
 		Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9* L_90 = L_89.___curPage_3;
-		V_29 = (bool)((((int32_t)((((RuntimeObject*)(Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9*)L_88) == ((RuntimeObject*)(Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9*)L_90))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_91 = V_29;
+		V_28 = (bool)((((int32_t)((((RuntimeObject*)(Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9*)L_88) == ((RuntimeObject*)(Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9*)L_90))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_91 = V_28;
 		if (!L_91)
 		{
-			goto IL_0295;
+			goto IL_0292;
 		}
 	}
 	{
-		V_22 = (bool)1;
-		V_20 = (bool)1;
 		V_21 = (bool)1;
-		goto IL_02bf;
+		V_19 = (bool)1;
+		V_20 = (bool)1;
+		goto IL_02bc;
 	}
 
-IL_0295:
+IL_0292:
 	{
 		int32_t L_92 = V_8;
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_93 = ___head0;
@@ -13491,18 +13488,18 @@ IL_0295:
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_97 = ___head0;
 		NullCheck(L_97);
 		int32_t L_98 = L_97->___indexOffset_8;
-		V_30 = (bool)((((int32_t)((((int64_t)((int64_t)L_92)) == ((int64_t)((int64_t)il2cpp_codegen_add(((int64_t)(uint64_t)L_96), ((int64_t)L_98)))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_99 = V_30;
+		V_29 = (bool)((((int32_t)((((int64_t)((int64_t)L_92)) == ((int64_t)((int64_t)il2cpp_codegen_add(((int64_t)(uint64_t)L_96), ((int64_t)L_98)))))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_99 = V_29;
 		if (!L_99)
 		{
-			goto IL_02bf;
+			goto IL_02bc;
 		}
 	}
 	{
-		V_20 = (bool)1;
+		V_19 = (bool)1;
 	}
 
-IL_02bf:
+IL_02bc:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_100 = ___head0;
 		NullCheck(L_100);
@@ -13512,15 +13509,15 @@ IL_02bf:
 		TextureId_tFF4B4AAE53408AB10B0B89CCA5F7B50CF2535E58 L_103 = ((TextureId_tFF4B4AAE53408AB10B0B89CCA5F7B50CF2535E58_StaticFields*)il2cpp_codegen_static_fields_for(TextureId_tFF4B4AAE53408AB10B0B89CCA5F7B50CF2535E58_il2cpp_TypeInfo_var))->___invalid_1;
 		bool L_104;
 		L_104 = TextureId_op_Inequality_m875B4887888A51A70E2CCEFC9CE6AE40A383EFF3_inline(L_102, L_103, NULL);
-		V_31 = L_104;
-		bool L_105 = V_31;
+		V_30 = L_104;
+		bool L_105 = V_30;
 		if (!L_105)
 		{
-			goto IL_031b;
+			goto IL_0318;
 		}
 	}
 	{
-		V_22 = (bool)1;
+		V_21 = (bool)1;
 		TextureSlotManager_tB1F8E620AE296DE3728FAAFBE3CC85D2A176928D* L_106 = __this->___m_TextureSlotManager_16;
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_107 = ___head0;
 		NullCheck(L_107);
@@ -13529,11 +13526,11 @@ IL_02bf:
 		NullCheck(L_106);
 		int32_t L_110;
 		L_110 = TextureSlotManager_IndexOf_m53C156E4C78E731B3035E593E64C2AF517BC9091(L_106, L_109, NULL);
-		V_23 = L_110;
-		int32_t L_111 = V_23;
+		V_22 = L_110;
+		int32_t L_111 = V_22;
 		if ((((int32_t)L_111) >= ((int32_t)0)))
 		{
-			goto IL_030b;
+			goto IL_0308;
 		}
 	}
 	{
@@ -13542,33 +13539,33 @@ IL_02bf:
 		int32_t L_113;
 		L_113 = TextureSlotManager_get_FreeSlots_m07D624EAB6ED9D3B1F4B4EF33DB2FAB1545871D2_inline(L_112, NULL);
 		G_B36_0 = ((((int32_t)L_113) < ((int32_t)1))? 1 : 0);
-		goto IL_030c;
+		goto IL_0309;
 	}
 
-IL_030b:
+IL_0308:
 	{
 		G_B36_0 = 0;
 	}
 
-IL_030c:
+IL_0309:
 	{
-		V_32 = (bool)G_B36_0;
-		bool L_114 = V_32;
+		V_31 = (bool)G_B36_0;
+		bool L_114 = V_31;
 		if (!L_114)
 		{
-			goto IL_031a;
+			goto IL_0317;
 		}
 	}
 	{
+		V_19 = (bool)1;
 		V_20 = (bool)1;
-		V_21 = (bool)1;
 	}
 
-IL_031a:
+IL_0317:
 	{
 	}
 
-IL_031b:
+IL_0318:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_115 = ___head0;
 		NullCheck(L_115);
@@ -13579,7 +13576,7 @@ IL_031b:
 		L_118 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_117, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_118)
 		{
-			goto IL_034c;
+			goto IL_0349;
 		}
 	}
 	{
@@ -13587,118 +13584,118 @@ IL_031b:
 		NullCheck(L_119);
 		State_tC241510131965D8DE1919EB16A3650E397E5AEAB* L_120 = (&L_119->___state_6);
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_121 = L_120->___font_1;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_122 = V_10;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_122 = V_9;
 		State_tC241510131965D8DE1919EB16A3650E397E5AEAB L_123 = L_122.___curState_2;
 		Texture_t791CBB51219779964E0E8A2ED7C1AA5F92A4A700* L_124 = L_123.___font_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_125;
 		L_125 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_121, L_124, NULL);
 		G_B42_0 = ((int32_t)(L_125));
-		goto IL_034d;
+		goto IL_034a;
 	}
 
-IL_034c:
+IL_0349:
 	{
 		G_B42_0 = 0;
 	}
 
-IL_034d:
+IL_034a:
 	{
-		V_33 = (bool)G_B42_0;
-		bool L_126 = V_33;
+		V_32 = (bool)G_B42_0;
+		bool L_126 = V_32;
 		if (!L_126)
 		{
-			goto IL_0361;
+			goto IL_035e;
 		}
 	}
 	{
-		V_22 = (bool)1;
-		V_26 = (bool)1;
-		V_20 = (bool)1;
 		V_21 = (bool)1;
+		V_25 = (bool)1;
+		V_19 = (bool)1;
+		V_20 = (bool)1;
 	}
 
-IL_0361:
+IL_035e:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_127 = ___head0;
 		NullCheck(L_127);
 		State_tC241510131965D8DE1919EB16A3650E397E5AEAB* L_128 = (&L_127->___state_6);
 		int32_t L_129 = L_128->___stencilRef_4;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_130 = V_10;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_130 = V_9;
 		State_tC241510131965D8DE1919EB16A3650E397E5AEAB L_131 = L_130.___curState_2;
 		int32_t L_132 = L_131.___stencilRef_4;
-		V_34 = (bool)((((int32_t)((((int32_t)L_129) == ((int32_t)L_132))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		bool L_133 = V_34;
+		V_33 = (bool)((((int32_t)((((int32_t)L_129) == ((int32_t)L_132))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+		bool L_133 = V_33;
 		if (!L_133)
 		{
-			goto IL_038e;
+			goto IL_038b;
 		}
 	}
 	{
-		V_22 = (bool)1;
-		V_20 = (bool)1;
 		V_21 = (bool)1;
+		V_19 = (bool)1;
+		V_20 = (bool)1;
 	}
 
-IL_038e:
+IL_038b:
 	{
-		bool L_134 = V_20;
-		bool L_135 = V_19;
-		V_35 = (bool)((int32_t)((int32_t)L_134&(int32_t)L_135));
-		bool L_136 = V_35;
+		bool L_134 = V_19;
+		bool L_135 = V_18;
+		V_34 = (bool)((int32_t)((int32_t)L_134&(int32_t)L_135));
+		bool L_136 = V_34;
 		if (!L_136)
 		{
-			goto IL_039e;
+			goto IL_039b;
 		}
 	}
 	{
-		V_21 = (bool)1;
+		V_20 = (bool)1;
+	}
+
+IL_039b:
+	{
+		goto IL_03a6;
 	}
 
 IL_039e:
 	{
-		goto IL_03a9;
-	}
-
-IL_03a1:
-	{
+		V_19 = (bool)1;
 		V_20 = (bool)1;
-		V_21 = (bool)1;
 	}
 
-IL_03a9:
+IL_03a6:
 	{
 		bool L_137 = V_0;
-		V_36 = L_137;
-		bool L_138 = V_36;
+		V_35 = L_137;
+		bool L_138 = V_35;
 		if (!L_138)
 		{
-			goto IL_03b8;
+			goto IL_03b5;
 		}
 	}
 	{
+		V_19 = (bool)1;
 		V_20 = (bool)1;
-		V_21 = (bool)1;
 	}
 
-IL_03b8:
+IL_03b5:
 	{
-		bool L_139 = V_20;
-		V_37 = L_139;
-		bool L_140 = V_37;
+		bool L_139 = V_19;
+		V_36 = L_139;
+		bool L_140 = V_36;
 		if (!L_140)
 		{
-			goto IL_04d8;
+			goto IL_04b3;
 		}
 	}
 	{
 		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_141 = V_7;
 		int32_t L_142 = L_141.___indexCount_1;
-		V_38 = (bool)((((int32_t)L_142) > ((int32_t)0))? 1 : 0);
-		bool L_143 = V_38;
+		V_37 = (bool)((((int32_t)L_142) > ((int32_t)0))? 1 : 0);
+		bool L_143 = V_37;
 		if (!L_143)
 		{
-			goto IL_041e;
+			goto IL_041b;
 		}
 	}
 	{
@@ -13707,15 +13704,15 @@ IL_03b8:
 		int32_t L_146 = L_145;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_146, 1));
 		int32_t L_147 = V_4;
-		V_39 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_144, L_146))&L_147));
+		V_38 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_144, L_146))&L_147));
 		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_148 = V_3;
-		int32_t L_149 = V_39;
+		int32_t L_149 = V_38;
 		uint32_t L_150 = sizeof(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4);
 		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_151 = V_7;
 		*(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4*)((DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4*)il2cpp_codegen_add((intptr_t)L_148, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_149), (int32_t)L_150)))) = L_151;
 		int32_t L_152 = V_6;
 		int32_t L_153 = V_2;
-		bool L_154 = V_21;
+		bool L_154 = V_20;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Assert_m6E778CACD0F440E2DEA9ACDD9330A22DAF16E96D((bool)((int32_t)(((((int32_t)L_152) < ((int32_t)L_153))? 1 : 0)|(int32_t)L_154)), NULL);
 		il2cpp_codegen_initobj((&V_7), sizeof(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4));
@@ -13726,16 +13723,16 @@ IL_03b8:
 		*((int32_t*)L_157) = (int32_t)((int32_t)il2cpp_codegen_add(L_158, 1));
 	}
 
-IL_041e:
+IL_041b:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_159 = ___head0;
 		NullCheck(L_159);
 		int32_t L_160 = L_159->___type_5;
-		V_40 = (bool)((((int32_t)L_160) == ((int32_t)0))? 1 : 0);
-		bool L_161 = V_40;
+		V_39 = (bool)((((int32_t)L_160) == ((int32_t)0))? 1 : 0);
+		bool L_161 = V_39;
 		if (!L_161)
 		{
-			goto IL_04d2;
+			goto IL_04ad;
 		}
 	}
 	{
@@ -13758,449 +13755,446 @@ IL_041e:
 		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_171 = L_170->___mesh_7;
 		NullCheck(L_171);
 		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_172 = (&L_171->___allocVerts_1);
-		uint32_t L_173 = L_172->___start_0;
+		uint32_t L_173 = L_172->___size_1;
+		(&V_7)->___vertsReferenced_3 = L_173;
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_174 = ___head0;
 		NullCheck(L_174);
 		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_175 = L_174->___mesh_7;
 		NullCheck(L_175);
 		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_176 = (&L_175->___allocVerts_1);
-		uint32_t L_177 = L_176->___size_1;
-		(&V_7)->___vertsReferenced_3 = ((int32_t)il2cpp_codegen_add((int32_t)L_173, (int32_t)L_177));
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_178 = ___head0;
-		NullCheck(L_178);
-		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_179 = L_178->___mesh_7;
-		NullCheck(L_179);
-		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_180 = (&L_179->___allocVerts_1);
-		uint32_t L_181 = L_180->___start_0;
-		(&V_7)->___minIndexVal_2 = L_181;
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_182 = V_7;
-		int32_t L_183 = L_182.___firstIndex_0;
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_184 = ___head0;
-		NullCheck(L_184);
-		int32_t L_185 = L_184->___indexCount_9;
-		V_8 = ((int32_t)il2cpp_codegen_add(L_183, L_185));
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_186 = V_7;
-		int32_t L_187 = L_186.___vertsReferenced_3;
+		uint32_t L_177 = L_176->___start_0;
+		(&V_7)->___minIndexVal_2 = L_177;
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_178 = V_7;
+		int32_t L_179 = L_178.___firstIndex_0;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_180 = ___head0;
+		NullCheck(L_180);
+		int32_t L_181 = L_180->___indexCount_9;
+		V_8 = ((int32_t)il2cpp_codegen_add(L_179, L_181));
+		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_182 = (&__this->___m_DrawStats_13);
+		uint32_t* L_183 = (&L_182->___totalIndices_1);
+		uint32_t* L_184 = L_183;
+		int32_t L_185 = *((uint32_t*)L_184);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_186 = ___head0;
+		NullCheck(L_186);
+		int32_t L_187 = L_186->___indexCount_9;
+		*((int32_t*)L_184) = (int32_t)((int32_t)il2cpp_codegen_add(L_185, L_187));
+	}
+
+IL_04ad:
+	{
+		goto IL_05b8;
+	}
+
+IL_04b3:
+	{
 		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_188 = V_7;
-		int32_t L_189 = L_188.___minIndexVal_2;
-		V_9 = ((int32_t)il2cpp_codegen_add(L_187, L_189));
-		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_190 = (&__this->___m_DrawStats_13);
-		uint32_t* L_191 = (&L_190->___totalIndices_1);
-		uint32_t* L_192 = L_191;
-		int32_t L_193 = *((uint32_t*)L_192);
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_194 = ___head0;
-		NullCheck(L_194);
-		int32_t L_195 = L_194->___indexCount_9;
-		*((int32_t*)L_192) = (int32_t)((int32_t)il2cpp_codegen_add(L_193, L_195));
-	}
-
-IL_04d2:
-	{
-		goto IL_05c4;
-	}
-
-IL_04d8:
-	{
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_196 = V_7;
-		int32_t L_197 = L_196.___indexCount_1;
-		V_41 = (bool)((((int32_t)L_197) == ((int32_t)0))? 1 : 0);
-		bool L_198 = V_41;
-		if (!L_198)
+		int32_t L_189 = L_188.___indexCount_1;
+		V_44 = (bool)((((int32_t)L_189) == ((int32_t)0))? 1 : 0);
+		bool L_190 = V_44;
+		if (!L_190)
 		{
-			goto IL_050e;
+			goto IL_04e9;
 		}
 	}
 	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_199 = ___head0;
-		NullCheck(L_199);
-		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_200 = L_199->___mesh_7;
-		NullCheck(L_200);
-		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_201 = (&L_200->___allocIndices_2);
-		uint32_t L_202 = L_201->___start_0;
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_203 = ___head0;
-		NullCheck(L_203);
-		int32_t L_204 = L_203->___indexOffset_8;
-		int32_t L_205 = ((int32_t)il2cpp_codegen_add((int32_t)L_202, L_204));
-		V_42 = L_205;
-		(&V_7)->___firstIndex_0 = L_205;
-		int32_t L_206 = V_42;
-		V_8 = L_206;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_191 = ___head0;
+		NullCheck(L_191);
+		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_192 = L_191->___mesh_7;
+		NullCheck(L_192);
+		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_193 = (&L_192->___allocIndices_2);
+		uint32_t L_194 = L_193->___start_0;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_195 = ___head0;
+		NullCheck(L_195);
+		int32_t L_196 = L_195->___indexOffset_8;
+		int32_t L_197 = ((int32_t)il2cpp_codegen_add((int32_t)L_194, L_196));
+		V_45 = L_197;
+		(&V_7)->___firstIndex_0 = L_197;
+		int32_t L_198 = V_45;
+		V_8 = L_198;
 	}
 
-IL_050e:
+IL_04e9:
 	{
-		int32_t L_207 = V_9;
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_208 = ___head0;
-		NullCheck(L_208);
-		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_209 = L_208->___mesh_7;
-		NullCheck(L_209);
-		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_210 = (&L_209->___allocVerts_1);
-		uint32_t L_211 = L_210->___size_1;
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_212 = ___head0;
-		NullCheck(L_212);
-		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_213 = L_212->___mesh_7;
-		NullCheck(L_213);
-		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_214 = (&L_213->___allocVerts_1);
-		uint32_t L_215 = L_214->___start_0;
-		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
-		int32_t L_216;
-		L_216 = Math_Max_m530EBA549AFD98CFC2BD29FE86C6376E67DF11CF(L_207, ((int32_t)il2cpp_codegen_add((int32_t)L_211, (int32_t)L_215)), NULL);
-		V_9 = L_216;
-		int32_t* L_217 = (&(&V_7)->___indexCount_1);
-		int32_t* L_218 = L_217;
-		int32_t L_219 = *((int32_t*)L_218);
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_220 = ___head0;
-		NullCheck(L_220);
-		int32_t L_221 = L_220->___indexCount_9;
-		*((int32_t*)L_218) = (int32_t)((int32_t)il2cpp_codegen_add(L_219, L_221));
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_222 = V_7;
-		int32_t L_223 = L_222.___minIndexVal_2;
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_224 = ___head0;
-		NullCheck(L_224);
-		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_225 = L_224->___mesh_7;
-		NullCheck(L_225);
-		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_226 = (&L_225->___allocVerts_1);
-		uint32_t L_227 = L_226->___start_0;
-		int32_t L_228;
-		L_228 = Math_Min_m53C488772A34D53917BCA2A491E79A0A5356ED52(L_223, L_227, NULL);
-		(&V_7)->___minIndexVal_2 = L_228;
-		int32_t L_229 = V_9;
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_230 = V_7;
-		int32_t L_231 = L_230.___minIndexVal_2;
-		(&V_7)->___vertsReferenced_3 = ((int32_t)il2cpp_codegen_subtract(L_229, L_231));
-		int32_t L_232 = V_8;
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_233 = ___head0;
-		NullCheck(L_233);
-		int32_t L_234 = L_233->___indexCount_9;
-		V_8 = ((int32_t)il2cpp_codegen_add(L_232, L_234));
-		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_235 = (&__this->___m_DrawStats_13);
-		uint32_t* L_236 = (&L_235->___totalIndices_1);
-		uint32_t* L_237 = L_236;
-		int32_t L_238 = *((uint32_t*)L_237);
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_239 = ___head0;
-		NullCheck(L_239);
-		int32_t L_240 = L_239->___indexCount_9;
-		*((int32_t*)L_237) = (int32_t)((int32_t)il2cpp_codegen_add(L_238, L_240));
-		bool L_241 = V_22;
-		V_43 = L_241;
-		bool L_242 = V_43;
-		if (!L_242)
+		int32_t* L_199 = (&(&V_7)->___indexCount_1);
+		int32_t* L_200 = L_199;
+		int32_t L_201 = *((int32_t*)L_200);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_202 = ___head0;
+		NullCheck(L_202);
+		int32_t L_203 = L_202->___indexCount_9;
+		*((int32_t*)L_200) = (int32_t)((int32_t)il2cpp_codegen_add(L_201, L_203));
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_204 = V_7;
+		int32_t L_205 = L_204.___minIndexVal_2;
+		V_40 = L_205;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_206 = ___head0;
+		NullCheck(L_206);
+		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_207 = L_206->___mesh_7;
+		NullCheck(L_207);
+		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_208 = (&L_207->___allocVerts_1);
+		uint32_t L_209 = L_208->___start_0;
+		V_41 = L_209;
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_210 = V_7;
+		int32_t L_211 = L_210.___minIndexVal_2;
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_212 = V_7;
+		int32_t L_213 = L_212.___vertsReferenced_3;
+		V_42 = ((int32_t)il2cpp_codegen_add(L_211, L_213));
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_214 = ___head0;
+		NullCheck(L_214);
+		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_215 = L_214->___mesh_7;
+		NullCheck(L_215);
+		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_216 = (&L_215->___allocVerts_1);
+		uint32_t L_217 = L_216->___start_0;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_218 = ___head0;
+		NullCheck(L_218);
+		MeshHandle_tC1E9A7ECCFDAEFDE064B8D58B35B9CEE5A70A22E* L_219 = L_218->___mesh_7;
+		NullCheck(L_219);
+		Alloc_t78312CFE58F38082281E80E297AE6176BD2BD8AE* L_220 = (&L_219->___allocVerts_1);
+		uint32_t L_221 = L_220->___size_1;
+		V_43 = ((int32_t)il2cpp_codegen_add((int32_t)L_217, (int32_t)L_221));
+		int32_t L_222 = V_40;
+		int32_t L_223 = V_41;
+		int32_t L_224;
+		L_224 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_222, L_223, NULL);
+		(&V_7)->___minIndexVal_2 = L_224;
+		int32_t L_225 = V_42;
+		int32_t L_226 = V_43;
+		int32_t L_227;
+		L_227 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(L_225, L_226, NULL);
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_228 = V_7;
+		int32_t L_229 = L_228.___minIndexVal_2;
+		(&V_7)->___vertsReferenced_3 = ((int32_t)il2cpp_codegen_subtract(L_227, L_229));
+		int32_t L_230 = V_8;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_231 = ___head0;
+		NullCheck(L_231);
+		int32_t L_232 = L_231->___indexCount_9;
+		V_8 = ((int32_t)il2cpp_codegen_add(L_230, L_232));
+		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_233 = (&__this->___m_DrawStats_13);
+		uint32_t* L_234 = (&L_233->___totalIndices_1);
+		uint32_t* L_235 = L_234;
+		int32_t L_236 = *((uint32_t*)L_235);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_237 = ___head0;
+		NullCheck(L_237);
+		int32_t L_238 = L_237->___indexCount_9;
+		*((int32_t*)L_235) = (int32_t)((int32_t)il2cpp_codegen_add(L_236, L_238));
+		bool L_239 = V_21;
+		V_46 = L_239;
+		bool L_240 = V_46;
+		if (!L_240)
 		{
-			goto IL_05b7;
+			goto IL_05ab;
 		}
 	}
 	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_243 = ___head0;
-		int32_t L_244 = V_23;
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_245 = V_24;
-		bool L_246 = V_25;
-		bool L_247 = V_26;
-		UIRenderDevice_ApplyDrawCommandState_m5585C7D69A031B120216ED74C92237E55C97A4A4_inline(__this, L_243, L_244, L_245, L_246, L_247, (&V_10), NULL);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_241 = ___head0;
+		int32_t L_242 = V_22;
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_243 = V_23;
+		bool L_244 = V_24;
+		bool L_245 = V_25;
+		UIRenderDevice_ApplyDrawCommandState_m5585C7D69A031B120216ED74C92237E55C97A4A4_inline(__this, L_241, L_242, L_243, L_244, L_245, (&V_9), NULL);
 	}
 
-IL_05b7:
+IL_05ab:
 	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_248 = ___head0;
-		NullCheck(L_248);
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_249 = L_248->___next_3;
-		___head0 = L_249;
-		goto IL_072f;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_246 = ___head0;
+		NullCheck(L_246);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_247 = L_246->___next_3;
+		___head0 = L_247;
+		goto IL_0723;
 	}
 
-IL_05c4:
+IL_05b8:
 	{
-		bool L_250 = V_21;
-		V_44 = L_250;
-		bool L_251 = V_44;
+		bool L_248 = V_20;
+		V_47 = L_248;
+		bool L_249 = V_47;
+		if (!L_249)
+		{
+			goto IL_06f6;
+		}
+	}
+	{
+		int32_t L_250 = V_6;
+		V_48 = (bool)((((int32_t)L_250) > ((int32_t)0))? 1 : 0);
+		bool L_251 = V_48;
 		if (!L_251)
 		{
-			goto IL_0702;
+			goto IL_05f0;
 		}
 	}
 	{
-		int32_t L_252 = V_6;
-		V_45 = (bool)((((int32_t)L_252) > ((int32_t)0))? 1 : 0);
-		bool L_253 = V_45;
-		if (!L_253)
-		{
-			goto IL_05fc;
-		}
-	}
-	{
-		bool L_254 = ___allowMaterialChange9;
-		UIRenderDevice_ApplyBatchState_mB92D091856407D85BAF2DEDC2C8CA8ECF1FB9FB0(__this, (&V_10), L_254, NULL);
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_255 = V_3;
-		int32_t L_256 = V_2;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_257 = V_10;
-		Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9* L_258 = L_257.___curPage_3;
-		UIRenderDevice_KickRanges_m24B9D4E7D87EE377B3DD86143D4B9DDD00CF9B6C(__this, L_255, (&V_6), (&V_5), L_256, L_258, NULL);
+		bool L_252 = ___allowMaterialChange9;
+		UIRenderDevice_ApplyBatchState_mB92D091856407D85BAF2DEDC2C8CA8ECF1FB9FB0(__this, (&V_9), L_252, NULL);
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_253 = V_3;
+		int32_t L_254 = V_2;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_255 = V_9;
+		Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9* L_256 = L_255.___curPage_3;
+		UIRenderDevice_KickRanges_m24B9D4E7D87EE377B3DD86143D4B9DDD00CF9B6C(__this, L_253, (&V_6), (&V_5), L_254, L_256, NULL);
 	}
 
-IL_05fc:
+IL_05f0:
 	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_259 = ___head0;
-		NullCheck(L_259);
-		int32_t L_260 = L_259->___type_5;
-		V_46 = (bool)((!(((uint32_t)L_260) <= ((uint32_t)0)))? 1 : 0);
-		bool L_261 = V_46;
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_257 = ___head0;
+		NullCheck(L_257);
+		int32_t L_258 = L_257->___type_5;
+		V_49 = (bool)((!(((uint32_t)L_258) <= ((uint32_t)0)))? 1 : 0);
+		bool L_259 = V_49;
+		if (!L_259)
+		{
+			goto IL_06f5;
+		}
+	}
+	{
+		bool L_260 = __this->___m_MockDevice_0;
+		V_50 = (bool)((((int32_t)L_260) == ((int32_t)0))? 1 : 0);
+		bool L_261 = V_50;
 		if (!L_261)
 		{
-			goto IL_0701;
+			goto IL_061e;
 		}
 	}
 	{
-		bool L_262 = __this->___m_MockDevice_0;
-		V_47 = (bool)((((int32_t)L_262) == ((int32_t)0))? 1 : 0);
-		bool L_263 = V_47;
-		if (!L_263)
-		{
-			goto IL_062a;
-		}
-	}
-	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_264 = ___head0;
-		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_265 = V_1;
-		float L_266 = ___pixelsPerPoint5;
-		Exception_t** L_267 = ___immediateException10;
-		NullCheck(L_264);
-		RenderChainCommand_ExecuteNonDrawMesh_m8E3516241CAAC2AAD86E4C72A3CDBD1B5DED19CE(L_264, L_265, L_266, L_267, NULL);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_262 = ___head0;
+		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_263 = V_1;
+		float L_264 = ___pixelsPerPoint5;
+		Exception_t** L_265 = ___immediateException10;
+		NullCheck(L_262);
+		RenderChainCommand_ExecuteNonDrawMesh_m8E3516241CAAC2AAD86E4C72A3CDBD1B5DED19CE(L_262, L_263, L_264, L_265, NULL);
 	}
 
-IL_062a:
+IL_061e:
+	{
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_266 = ___head0;
+		NullCheck(L_266);
+		int32_t L_267 = L_266->___type_5;
+		if ((((int32_t)L_267) == ((int32_t)2)))
+		{
+			goto IL_0659;
+		}
+	}
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_268 = ___head0;
 		NullCheck(L_268);
 		int32_t L_269 = L_268->___type_5;
-		if ((((int32_t)L_269) == ((int32_t)2)))
+		if ((((int32_t)L_269) == ((int32_t)1)))
 		{
-			goto IL_0665;
+			goto IL_0659;
 		}
 	}
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_270 = ___head0;
 		NullCheck(L_270);
 		int32_t L_271 = L_270->___type_5;
-		if ((((int32_t)L_271) == ((int32_t)1)))
+		if ((((int32_t)L_271) == ((int32_t)((int32_t)9))))
 		{
-			goto IL_0665;
+			goto IL_0659;
 		}
 	}
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_272 = ___head0;
 		NullCheck(L_272);
 		int32_t L_273 = L_272->___type_5;
-		if ((((int32_t)L_273) == ((int32_t)((int32_t)9))))
+		if ((((int32_t)L_273) == ((int32_t)7)))
 		{
-			goto IL_0665;
+			goto IL_0659;
 		}
 	}
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_274 = ___head0;
 		NullCheck(L_274);
 		int32_t L_275 = L_274->___type_5;
-		if ((((int32_t)L_275) == ((int32_t)7)))
+		if ((((int32_t)L_275) == ((int32_t)((int32_t)11))))
 		{
-			goto IL_0665;
+			goto IL_0659;
 		}
 	}
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_276 = ___head0;
 		NullCheck(L_276);
 		int32_t L_277 = L_276->___type_5;
-		if ((((int32_t)L_277) == ((int32_t)((int32_t)11))))
-		{
-			goto IL_0665;
-		}
-	}
-	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_278 = ___head0;
-		NullCheck(L_278);
-		int32_t L_279 = L_278->___type_5;
-		G_B76_0 = ((((int32_t)L_279) == ((int32_t)((int32_t)10)))? 1 : 0);
-		goto IL_0666;
+		G_B76_0 = ((((int32_t)L_277) == ((int32_t)((int32_t)10)))? 1 : 0);
+		goto IL_065a;
 	}
 
-IL_0665:
+IL_0659:
 	{
 		G_B76_0 = 1;
 	}
 
-IL_0666:
+IL_065a:
 	{
-		V_48 = (bool)G_B76_0;
-		bool L_280 = V_48;
-		if (!L_280)
+		V_51 = (bool)G_B76_0;
+		bool L_278 = V_51;
+		if (!L_278)
 		{
-			goto IL_0700;
+			goto IL_06f4;
 		}
 	}
 	{
-		State_tC241510131965D8DE1919EB16A3650E397E5AEAB* L_281 = (&(&V_10)->___curState_2);
-		L_281->___material_0 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
-		Il2CppCodeGenWriteBarrier((void**)(&L_281->___material_0), (void*)(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL);
-		(&V_10)->___mustApplyMaterial_4 = (bool)0;
-		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_282 = (&__this->___m_DrawStats_13);
-		uint32_t* L_283 = (&L_282->___immediateDraws_7);
-		uint32_t* L_284 = L_283;
-		int32_t L_285 = *((uint32_t*)L_284);
-		*((int32_t*)L_284) = (int32_t)((int32_t)il2cpp_codegen_add(L_285, 1));
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_286 = ___head0;
-		NullCheck(L_286);
-		int32_t L_287 = L_286->___type_5;
-		V_49 = (bool)((((int32_t)L_287) == ((int32_t)((int32_t)11)))? 1 : 0);
-		bool L_288 = V_49;
-		if (!L_288)
+		State_tC241510131965D8DE1919EB16A3650E397E5AEAB* L_279 = (&(&V_9)->___curState_2);
+		L_279->___material_0 = (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL;
+		Il2CppCodeGenWriteBarrier((void**)(&L_279->___material_0), (void*)(Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*)NULL);
+		(&V_9)->___mustApplyMaterial_4 = (bool)0;
+		DrawStatistics_t4AF06C67CEC7B97509EBAD48E3EE908301598E6F* L_280 = (&__this->___m_DrawStats_13);
+		uint32_t* L_281 = (&L_280->___immediateDraws_7);
+		uint32_t* L_282 = L_281;
+		int32_t L_283 = *((uint32_t*)L_282);
+		*((int32_t*)L_282) = (int32_t)((int32_t)il2cpp_codegen_add(L_283, 1));
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_284 = ___head0;
+		NullCheck(L_284);
+		int32_t L_285 = L_284->___type_5;
+		V_52 = (bool)((((int32_t)L_285) == ((int32_t)((int32_t)11)))? 1 : 0);
+		bool L_286 = V_52;
+		if (!L_286)
 		{
-			goto IL_06d3;
+			goto IL_06c7;
 		}
 	}
 	{
-		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_289 = V_1;
-		NullCheck(L_289);
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_290 = L_289->___defaultMaterial_5;
+		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_287 = V_1;
+		NullCheck(L_287);
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_288 = L_287->___defaultMaterial_5;
+		NullCheck(L_288);
+		int32_t L_289;
+		L_289 = List_1_get_Count_m48BBB83C5F748E6E6FF0731C3682092DEA6A7173_inline(L_288, List_1_get_Count_m48BBB83C5F748E6E6FF0731C3682092DEA6A7173_RuntimeMethod_var);
+		V_53 = ((int32_t)il2cpp_codegen_subtract(L_289, 1));
+		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_290 = V_1;
 		NullCheck(L_290);
-		int32_t L_291;
-		L_291 = List_1_get_Count_m48BBB83C5F748E6E6FF0731C3682092DEA6A7173_inline(L_290, List_1_get_Count_m48BBB83C5F748E6E6FF0731C3682092DEA6A7173_RuntimeMethod_var);
-		V_50 = ((int32_t)il2cpp_codegen_subtract(L_291, 1));
-		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_292 = V_1;
-		NullCheck(L_292);
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_293 = L_292->___defaultMaterial_5;
-		int32_t L_294 = V_50;
-		NullCheck(L_293);
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_295;
-		L_295 = List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456(L_293, L_294, List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456_RuntimeMethod_var);
-		___defaultMat2 = L_295;
-		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_296 = V_1;
-		NullCheck(L_296);
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_297 = L_296->___defaultMaterial_5;
-		int32_t L_298 = V_50;
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_291 = L_290->___defaultMaterial_5;
+		int32_t L_292 = V_53;
+		NullCheck(L_291);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_293;
+		L_293 = List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456(L_291, L_292, List_1_get_Item_m70F5CFC2DEA9332B78C5ADC0EE1CE1B7465B1456_RuntimeMethod_var);
+		___defaultMat2 = L_293;
+		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_294 = V_1;
+		NullCheck(L_294);
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_295 = L_294->___defaultMaterial_5;
+		int32_t L_296 = V_53;
+		NullCheck(L_295);
+		List_1_RemoveAt_mD461DC585ED2CF965C6FABF04A941287186E0354(L_295, L_296, List_1_RemoveAt_mD461DC585ED2CF965C6FABF04A941287186E0354_RuntimeMethod_var);
+	}
+
+IL_06c7:
+	{
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_297 = ___head0;
 		NullCheck(L_297);
-		List_1_RemoveAt_mD461DC585ED2CF965C6FABF04A941287186E0354(L_297, L_298, List_1_RemoveAt_mD461DC585ED2CF965C6FABF04A941287186E0354_RuntimeMethod_var);
-	}
-
-IL_06d3:
-	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_299 = ___head0;
-		NullCheck(L_299);
-		int32_t L_300 = L_299->___type_5;
-		V_51 = (bool)((((int32_t)L_300) == ((int32_t)((int32_t)10)))? 1 : 0);
-		bool L_301 = V_51;
-		if (!L_301)
+		int32_t L_298 = L_297->___type_5;
+		V_54 = (bool)((((int32_t)L_298) == ((int32_t)((int32_t)10)))? 1 : 0);
+		bool L_299 = V_54;
+		if (!L_299)
 		{
-			goto IL_06ff;
+			goto IL_06f3;
 		}
 	}
 	{
-		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_302 = V_1;
-		NullCheck(L_302);
-		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_303 = L_302->___defaultMaterial_5;
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_304 = ___defaultMat2;
+		DrawParams_t523864F415D78BD8BB14E8B7BD349594D6187443* L_300 = V_1;
+		NullCheck(L_300);
+		List_1_t386E09F4F22DDE4D2AC41A8567FFF283C254537B* L_301 = L_300->___defaultMaterial_5;
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_302 = ___defaultMat2;
+		NullCheck(L_301);
+		List_1_Add_m5F62EE992DBCC5323267265794235C9EEE07997B_inline(L_301, L_302, List_1_Add_m5F62EE992DBCC5323267265794235C9EEE07997B_RuntimeMethod_var);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_303 = ___head0;
 		NullCheck(L_303);
-		List_1_Add_m5F62EE992DBCC5323267265794235C9EEE07997B_inline(L_303, L_304, List_1_Add_m5F62EE992DBCC5323267265794235C9EEE07997B_RuntimeMethod_var);
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_305 = ___head0;
-		NullCheck(L_305);
-		State_tC241510131965D8DE1919EB16A3650E397E5AEAB* L_306 = (&L_305->___state_6);
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_307 = L_306->___material_0;
-		___defaultMat2 = L_307;
+		State_tC241510131965D8DE1919EB16A3650E397E5AEAB* L_304 = (&L_303->___state_6);
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_305 = L_304->___material_0;
+		___defaultMat2 = L_305;
 	}
 
-IL_06ff:
+IL_06f3:
 	{
 	}
 
-IL_0700:
+IL_06f4:
 	{
 	}
 
-IL_0701:
+IL_06f5:
 	{
 	}
 
-IL_0702:
+IL_06f6:
 	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_308 = ___head0;
-		NullCheck(L_308);
-		int32_t L_309 = L_308->___type_5;
-		bool L_310 = V_22;
-		V_52 = (bool)((int32_t)(((((int32_t)L_309) == ((int32_t)0))? 1 : 0)&(int32_t)L_310));
-		bool L_311 = V_52;
-		if (!L_311)
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_306 = ___head0;
+		NullCheck(L_306);
+		int32_t L_307 = L_306->___type_5;
+		bool L_308 = V_21;
+		V_55 = (bool)((int32_t)(((((int32_t)L_307) == ((int32_t)0))? 1 : 0)&(int32_t)L_308));
+		bool L_309 = V_55;
+		if (!L_309)
 		{
-			goto IL_0726;
+			goto IL_071a;
 		}
 	}
 	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_312 = ___head0;
-		int32_t L_313 = V_23;
-		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_314 = V_24;
-		bool L_315 = V_25;
-		bool L_316 = V_26;
-		UIRenderDevice_ApplyDrawCommandState_m5585C7D69A031B120216ED74C92237E55C97A4A4_inline(__this, L_312, L_313, L_314, L_315, L_316, (&V_10), NULL);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_310 = ___head0;
+		int32_t L_311 = V_22;
+		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_312 = V_23;
+		bool L_313 = V_24;
+		bool L_314 = V_25;
+		UIRenderDevice_ApplyDrawCommandState_m5585C7D69A031B120216ED74C92237E55C97A4A4_inline(__this, L_310, L_311, L_312, L_313, L_314, (&V_9), NULL);
 	}
 
-IL_0726:
+IL_071a:
+	{
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_315 = ___head0;
+		NullCheck(L_315);
+		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_316 = L_315->___next_3;
+		___head0 = L_316;
+	}
+
+IL_0723:
 	{
 		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_317 = ___head0;
-		NullCheck(L_317);
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_318 = L_317->___next_3;
-		___head0 = L_318;
-	}
-
-IL_072f:
-	{
-		RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727* L_319 = ___head0;
-		V_53 = (bool)((!(((RuntimeObject*)(RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727*)L_319) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
-		bool L_320 = V_53;
-		if (L_320)
+		V_56 = (bool)((!(((RuntimeObject*)(RenderChainCommand_t4F70E36AF4BC3645C8F9C822B7A3ACE9CB815727*)L_317) <= ((RuntimeObject*)(RuntimeObject*)NULL)))? 1 : 0);
+		bool L_318 = V_56;
+		if (L_318)
 		{
-			goto IL_01b7;
+			goto IL_01b4;
 		}
 	}
 	{
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_321 = V_7;
-		int32_t L_322 = L_321.___indexCount_1;
-		V_54 = (bool)((((int32_t)L_322) > ((int32_t)0))? 1 : 0);
-		bool L_323 = V_54;
-		if (!L_323)
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_319 = V_7;
+		int32_t L_320 = L_319.___indexCount_1;
+		V_57 = (bool)((((int32_t)L_320) > ((int32_t)0))? 1 : 0);
+		bool L_321 = V_57;
+		if (!L_321)
 		{
-			goto IL_0770;
+			goto IL_0764;
 		}
 	}
 	{
-		int32_t L_324 = V_5;
-		int32_t L_325 = V_6;
-		int32_t L_326 = L_325;
-		V_6 = ((int32_t)il2cpp_codegen_add(L_326, 1));
-		int32_t L_327 = V_4;
-		V_55 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_324, L_326))&L_327));
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_328 = V_3;
-		int32_t L_329 = V_55;
-		uint32_t L_330 = sizeof(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4);
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_331 = V_7;
-		*(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4*)((DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4*)il2cpp_codegen_add((intptr_t)L_328, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_329), (int32_t)L_330)))) = L_331;
+		int32_t L_322 = V_5;
+		int32_t L_323 = V_6;
+		int32_t L_324 = L_323;
+		V_6 = ((int32_t)il2cpp_codegen_add(L_324, 1));
+		int32_t L_325 = V_4;
+		V_58 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_322, L_324))&L_325));
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_326 = V_3;
+		int32_t L_327 = V_58;
+		uint32_t L_328 = sizeof(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4);
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4 L_329 = V_7;
+		*(DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4*)((DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4*)il2cpp_codegen_add((intptr_t)L_326, ((intptr_t)il2cpp_codegen_multiply(((intptr_t)L_327), (int32_t)L_328)))) = L_329;
 	}
 
-IL_0770:
+IL_0764:
 	{
-		int32_t L_332 = V_6;
-		V_56 = (bool)((((int32_t)L_332) > ((int32_t)0))? 1 : 0);
-		bool L_333 = V_56;
-		if (!L_333)
+		int32_t L_330 = V_6;
+		V_59 = (bool)((((int32_t)L_330) > ((int32_t)0))? 1 : 0);
+		bool L_331 = V_59;
+		if (!L_331)
 		{
-			goto IL_079c;
+			goto IL_0790;
 		}
 	}
 	{
-		bool L_334 = ___allowMaterialChange9;
-		UIRenderDevice_ApplyBatchState_mB92D091856407D85BAF2DEDC2C8CA8ECF1FB9FB0(__this, (&V_10), L_334, NULL);
-		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_335 = V_3;
-		int32_t L_336 = V_2;
-		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_337 = V_10;
-		Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9* L_338 = L_337.___curPage_3;
-		UIRenderDevice_KickRanges_m24B9D4E7D87EE377B3DD86143D4B9DDD00CF9B6C(__this, L_335, (&V_6), (&V_5), L_336, L_338, NULL);
+		bool L_332 = ___allowMaterialChange9;
+		UIRenderDevice_ApplyBatchState_mB92D091856407D85BAF2DEDC2C8CA8ECF1FB9FB0(__this, (&V_9), L_332, NULL);
+		DrawBufferRange_t684F255F5C954760B12F6689F84E78811040C7A4* L_333 = V_3;
+		int32_t L_334 = V_2;
+		EvaluationState_t91A908747DD184A56AA6402529B965E07E555567 L_335 = V_9;
+		Page_tB4EA8095DF85BAF22AB8FCA71400121E721B57C9* L_336 = L_335.___curPage_3;
+		UIRenderDevice_KickRanges_m24B9D4E7D87EE377B3DD86143D4B9DDD00CF9B6C(__this, L_333, (&V_6), (&V_5), L_334, L_336, NULL);
 	}
 
-IL_079c:
+IL_0790:
 	{
 		UIRenderDevice_UpdateFenceValue_m2978F0D972BFFDA9056F0CC42EB800170E2B37BF(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Utility_t8BCC393462C6270211734BE47CF5350F05EC97AD_il2cpp_TypeInfo_var);

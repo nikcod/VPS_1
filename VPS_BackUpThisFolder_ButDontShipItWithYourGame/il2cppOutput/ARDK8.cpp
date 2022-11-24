@@ -2099,7 +2099,6 @@ struct Void_t4861ACF8F4594C3437BB48B6E56783494B843915
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=12
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D12_tEC718D45B292E23CAC7A2C75DA90ABD3284CBA5A 
 {
 	union
@@ -2113,10 +2112,8 @@ struct __StaticArrayInitTypeSizeU3D12_tEC718D45B292E23CAC7A2C75DA90ABD3284CBA5A
 		uint8_t __StaticArrayInitTypeSizeU3D12_tEC718D45B292E23CAC7A2C75DA90ABD3284CBA5A__padding[12];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=16
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D16_t7DDC2A036EA9E6BC2876D752C163E375F7F0FBCA 
 {
 	union
@@ -2130,10 +2127,8 @@ struct __StaticArrayInitTypeSizeU3D16_t7DDC2A036EA9E6BC2876D752C163E375F7F0FBCA
 		uint8_t __StaticArrayInitTypeSizeU3D16_t7DDC2A036EA9E6BC2876D752C163E375F7F0FBCA__padding[16];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=24
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D24_tD0B413F4B21B2FD7EEA994E763E1D3DE8945C031 
 {
 	union
@@ -2147,7 +2142,6 @@ struct __StaticArrayInitTypeSizeU3D24_tD0B413F4B21B2FD7EEA994E763E1D3DE8945C031
 		uint8_t __StaticArrayInitTypeSizeU3D24_tD0B413F4B21B2FD7EEA994E763E1D3DE8945C031__padding[24];
 	};
 };
-#pragma pack(pop, tp)
 
 // Niantic.ARDK.AR.Awareness.AwarenessBufferProcessor`1<Niantic.ARDK.AR.Awareness.Depth.IDepthBuffer>
 struct AwarenessBufferProcessor_1_t190E9951E14C6CEB5980D3299F7B48567619611F  : public RuntimeObject

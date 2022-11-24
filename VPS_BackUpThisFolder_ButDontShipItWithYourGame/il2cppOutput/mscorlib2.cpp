@@ -1988,7 +1988,6 @@ struct ErrorInfo_t776D0DEFF42C5321EB2548D87ED238CBE55467F8
 };
 
 // System.String/ProbabilisticMap
-#pragma pack(push, tp, 1)
 struct ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B 
 {
 	union
@@ -2002,7 +2001,6 @@ struct ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B
 		uint8_t ProbabilisticMap_t0DA8A558FAD7B468FD97F480BFF8CDFA5E1F024B__padding[32];
 	};
 };
-#pragma pack(pop, tp)
 
 // System.TimeZoneInfo/TZifHead
 struct TZifHead_tCE3B6453694DFA5CC267A302DBC5CB8AF9ECD852 

@@ -99,6 +99,8 @@ struct ReadOnlyCollection_1_tE414953665CCBE1BFF28E8E32C184621ADDA4B76;
 struct ValueCollection_tA42ADC7103643E7D494F8B255CE2779A8D453976;
 // System.Collections.Generic.Dictionary`2/Entry<UnityEngine.Camera,UnityEngine.Rendering.Universal.Internal.PreviousFrameData>[]
 struct EntryU5BU5D_tE57C847A3146ED2E26F8DEEF9753056682B4B7F6;
+// System.ValueTuple`2<UnityEngine.Rendering.VolumeParameter,UnityEngine.Rendering.VolumeParameter>[]
+struct ValueTuple_2U5BU5D_tE2E90A16702AA41094A74222F01C7F383CC57377;
 // UnityEngine.Experimental.Rendering.GraphicsFormat[][]
 struct GraphicsFormatU5BU5DU5BU5D_t1424BD937A890524D2A66FF39E61DEB0F10FE0A2;
 // System.Int32[][]
@@ -1197,6 +1199,10 @@ struct VolumeStack_t5DE94743BDB63D97EF5587DBDAE46468233F36E8  : public RuntimeOb
 {
 	// System.Collections.Generic.Dictionary`2<System.Type,UnityEngine.Rendering.VolumeComponent> UnityEngine.Rendering.VolumeStack::components
 	Dictionary_2_t5A7CE09F4D3EC74EEAE8DB41E209394AF6D9C99A* ___components_0;
+	// System.ValueTuple`2<UnityEngine.Rendering.VolumeParameter,UnityEngine.Rendering.VolumeParameter>[] UnityEngine.Rendering.VolumeStack::defaultParameters
+	ValueTuple_2U5BU5D_tE2E90A16702AA41094A74222F01C7F383CC57377* ___defaultParameters_1;
+	// System.Boolean UnityEngine.Rendering.VolumeStack::requiresReset
+	bool ___requiresReset_2;
 };
 
 // UnityEngine.Rendering.Universal.Internal.AdditionalLightsShadowCasterPass/AdditionalShadowsConstantBuffer
@@ -12651,7 +12657,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CopyDepthPass_OnCameraSetup_m3E875202448
 		// descriptor.colorFormat = RenderTextureFormat.Depth;
 		RenderTextureDescriptor_set_colorFormat_m61B0FA4FCDE8A0F8A843DD6BF74097C21021C4FE((&V_0), 1, NULL);
 		// descriptor.depthBufferBits = UniversalRenderer.k_DepthStencilBufferBits;
-		RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&V_0), ((int32_t)32), NULL);
+		RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&V_0), ((int32_t)24), NULL);
 		// descriptor.msaaSamples = 1;
 		RenderTextureDescriptor_set_msaaSamples_m6910E09489372746391B14FBAF59A7237539D6C4_inline((&V_0), 1, NULL);
 		// if (this.AllocateRT)
@@ -13703,7 +13709,7 @@ IL_0021:
 		// baseDescriptor.colorFormat = RenderTextureFormat.Depth;
 		RenderTextureDescriptor_set_colorFormat_m61B0FA4FCDE8A0F8A843DD6BF74097C21021C4FE((&___baseDescriptor0), 1, NULL);
 		// baseDescriptor.depthBufferBits = UniversalRenderer.k_DepthStencilBufferBits;
-		RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&___baseDescriptor0), ((int32_t)32), NULL);
+		RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&___baseDescriptor0), ((int32_t)24), NULL);
 		// baseDescriptor.msaaSamples = 1;// Depth-Only pass don't use MSAA
 		RenderTextureDescriptor_set_msaaSamples_m6910E09489372746391B14FBAF59A7237539D6C4_inline((&___baseDescriptor0), 1, NULL);
 		// depthDescriptor = baseDescriptor;
@@ -14295,7 +14301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DepthOnlyPass_Setup_m5EA87D3794375FF0E09
 		// baseDescriptor.colorFormat = RenderTextureFormat.Depth;
 		RenderTextureDescriptor_set_colorFormat_m61B0FA4FCDE8A0F8A843DD6BF74097C21021C4FE((&___baseDescriptor0), 1, NULL);
 		// baseDescriptor.depthBufferBits = UniversalRenderer.k_DepthStencilBufferBits;
-		RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&___baseDescriptor0), ((int32_t)32), NULL);
+		RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&___baseDescriptor0), ((int32_t)24), NULL);
 		// baseDescriptor.msaaSamples = 1;
 		RenderTextureDescriptor_set_msaaSamples_m6910E09489372746391B14FBAF59A7237539D6C4_inline((&___baseDescriptor0), 1, NULL);
 		// descriptor = baseDescriptor;

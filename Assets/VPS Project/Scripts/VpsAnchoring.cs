@@ -363,7 +363,7 @@ namespace Niantic.ARDKExamples.WayspotAnchors
             _localizationStatus.text = "Localization status: " + args.State;
             if(args.State.ToString() == "Localized")
             {
-                loadAnchor();
+                //loadAnchor();
             }
         }
 

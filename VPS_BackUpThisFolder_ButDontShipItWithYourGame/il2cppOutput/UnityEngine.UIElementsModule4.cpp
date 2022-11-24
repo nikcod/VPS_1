@@ -4427,8 +4427,10 @@ struct UxmlTraits_t71FC85ADDE15ED13EAEAA0CEF1B5D7F4F44DAFAE  : public UxmlTraits
 	UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* ___m_LowValue_13;
 	// UnityEngine.UIElements.UxmlFloatAttributeDescription UnityEngine.UIElements.AbstractProgressBar/UxmlTraits::m_HighValue
 	UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* ___m_HighValue_14;
+	// UnityEngine.UIElements.UxmlFloatAttributeDescription UnityEngine.UIElements.AbstractProgressBar/UxmlTraits::m_Value
+	UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* ___m_Value_15;
 	// UnityEngine.UIElements.UxmlStringAttributeDescription UnityEngine.UIElements.AbstractProgressBar/UxmlTraits::m_Title
-	UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* ___m_Title_15;
+	UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* ___m_Title_16;
 };
 
 // UnityEngine.UIElements.Foldout/UxmlTraits
@@ -24724,31 +24726,40 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UxmlTraits_Init_mE5AE36159A4D0595C93A06B
 		L_13 = VirtualFuncInvoker2< float, RuntimeObject*, CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 >::Invoke(4 /* T UnityEngine.UIElements.TypedUxmlAttributeDescription`1<System.Single>::GetValueFromBag(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext) */, L_10, L_11, L_12);
 		NullCheck(L_9);
 		AbstractProgressBar_set_highValue_mD77530EAD3288536610F559592390674F4FD6287(L_9, L_13, NULL);
-		UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* L_14 = __this->___m_Title_15;
-		RuntimeObject* L_15 = ___bag1;
-		CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 L_16 = ___cc2;
+		AbstractProgressBar_t953B809E5B45C1CF994EDD60757A74B59267BC30* L_14 = V_0;
+		UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* L_15 = __this->___m_Value_15;
+		RuntimeObject* L_16 = ___bag1;
+		CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 L_17 = ___cc2;
+		NullCheck(L_15);
+		float L_18;
+		L_18 = VirtualFuncInvoker2< float, RuntimeObject*, CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 >::Invoke(4 /* T UnityEngine.UIElements.TypedUxmlAttributeDescription`1<System.Single>::GetValueFromBag(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext) */, L_15, L_16, L_17);
 		NullCheck(L_14);
-		String_t* L_17;
-		L_17 = VirtualFuncInvoker2< String_t*, RuntimeObject*, CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 >::Invoke(4 /* T UnityEngine.UIElements.TypedUxmlAttributeDescription`1<System.String>::GetValueFromBag(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext) */, L_14, L_15, L_16);
-		V_1 = L_17;
-		String_t* L_18 = V_1;
-		bool L_19;
-		L_19 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_18, NULL);
-		V_2 = (bool)((((int32_t)L_19) == ((int32_t)0))? 1 : 0);
-		bool L_20 = V_2;
-		if (!L_20)
+		VirtualActionInvoker1< float >::Invoke(101 /* System.Void UnityEngine.UIElements.AbstractProgressBar::set_value(System.Single) */, L_14, L_18);
+		UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* L_19 = __this->___m_Title_16;
+		RuntimeObject* L_20 = ___bag1;
+		CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 L_21 = ___cc2;
+		NullCheck(L_19);
+		String_t* L_22;
+		L_22 = VirtualFuncInvoker2< String_t*, RuntimeObject*, CreationContext_t9C57B5BE551CCE200C0A2C72711BFF9DA298C257 >::Invoke(4 /* T UnityEngine.UIElements.TypedUxmlAttributeDescription`1<System.String>::GetValueFromBag(UnityEngine.UIElements.IUxmlAttributes,UnityEngine.UIElements.CreationContext) */, L_19, L_20, L_21);
+		V_1 = L_22;
+		String_t* L_23 = V_1;
+		bool L_24;
+		L_24 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_23, NULL);
+		V_2 = (bool)((((int32_t)L_24) == ((int32_t)0))? 1 : 0);
+		bool L_25 = V_2;
+		if (!L_25)
 		{
-			goto IL_005f;
+			goto IL_0073;
 		}
 	}
 	{
-		AbstractProgressBar_t953B809E5B45C1CF994EDD60757A74B59267BC30* L_21 = V_0;
-		String_t* L_22 = V_1;
-		NullCheck(L_21);
-		AbstractProgressBar_set_title_mF1E785303CB4F22C12A18843653E205B5D2E2812(L_21, L_22, NULL);
+		AbstractProgressBar_t953B809E5B45C1CF994EDD60757A74B59267BC30* L_26 = V_0;
+		String_t* L_27 = V_1;
+		NullCheck(L_26);
+		AbstractProgressBar_set_title_mF1E785303CB4F22C12A18843653E205B5D2E2812(L_26, L_27, NULL);
 	}
 
-IL_005f:
+IL_0073:
 	{
 		return;
 	}
@@ -24763,6 +24774,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UxmlTraits__ctor_mCEF2BF3E30103535062F30
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral1906B4C73F49DA7542624105E2C9741AF35043AD);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral46F273EF641E07D271D91E0DC24A4392582671F8);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral519E44104E3BA0EB020FAF512071106431379703);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralC7B4D926EF9532A71B25AEC040A33D52C926425F);
 		s_Il2CppMethodInitialized = true;
@@ -24790,14 +24802,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UxmlTraits__ctor_mCEF2BF3E30103535062F30
 		TypedUxmlAttributeDescription_1_set_defaultValue_m9CD397DCF26F3871BE330F890164CB7C3B5E9BBD_inline(L_5, (100.0f), TypedUxmlAttributeDescription_1_set_defaultValue_m9CD397DCF26F3871BE330F890164CB7C3B5E9BBD_RuntimeMethod_var);
 		__this->___m_HighValue_14 = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_HighValue_14), (void*)L_5);
-		UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* L_6 = (UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF*)il2cpp_codegen_object_new(UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF_il2cpp_TypeInfo_var);
+		UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* L_6 = (UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB*)il2cpp_codegen_object_new(UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB_il2cpp_TypeInfo_var);
 		NullCheck(L_6);
-		UxmlStringAttributeDescription__ctor_mA8A849D4B098131C4D456911CAA16E3A964B51D7(L_6, NULL);
-		UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* L_7 = L_6;
+		UxmlFloatAttributeDescription__ctor_mC065303B0E84820CB5EF79B9AD3E6CF42A031641(L_6, NULL);
+		UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* L_7 = L_6;
 		NullCheck(L_7);
-		UxmlAttributeDescription_set_name_mCE9C58621BAD7AB4E59D83DD21224A8FA6517E3E_inline(L_7, _stringLiteralC7B4D926EF9532A71B25AEC040A33D52C926425F, NULL);
-		__this->___m_Title_15 = L_7;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Title_15), (void*)L_7);
+		UxmlAttributeDescription_set_name_mCE9C58621BAD7AB4E59D83DD21224A8FA6517E3E_inline(L_7, _stringLiteral46F273EF641E07D271D91E0DC24A4392582671F8, NULL);
+		UxmlFloatAttributeDescription_t1B8A606E367C713102FC17E8AC732758B48DD4BB* L_8 = L_7;
+		NullCheck(L_8);
+		TypedUxmlAttributeDescription_1_set_defaultValue_m9CD397DCF26F3871BE330F890164CB7C3B5E9BBD_inline(L_8, (0.0f), TypedUxmlAttributeDescription_1_set_defaultValue_m9CD397DCF26F3871BE330F890164CB7C3B5E9BBD_RuntimeMethod_var);
+		__this->___m_Value_15 = L_8;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Value_15), (void*)L_8);
+		UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* L_9 = (UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF*)il2cpp_codegen_object_new(UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF_il2cpp_TypeInfo_var);
+		NullCheck(L_9);
+		UxmlStringAttributeDescription__ctor_mA8A849D4B098131C4D456911CAA16E3A964B51D7(L_9, NULL);
+		UxmlStringAttributeDescription_t60C9BE81B6A3251AD7A38A90E46F240E016293EF* L_10 = L_9;
+		NullCheck(L_10);
+		UxmlAttributeDescription_set_name_mCE9C58621BAD7AB4E59D83DD21224A8FA6517E3E_inline(L_10, _stringLiteralC7B4D926EF9532A71B25AEC040A33D52C926425F, NULL);
+		__this->___m_Title_16 = L_10;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Title_16), (void*)L_10);
 		UxmlTraits__ctor_mD1446358752A926B32BC92B0446AA5E87090DD97(__this, NULL);
 		return;
 	}

@@ -3563,7 +3563,6 @@ struct WebResponse_t7CDE1F20895C8D5AD392425F9AD4BE8E8696B682  : public MarshalBy
 };
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=10
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D10_tE95261BAB1CBAAC65C6AEDB8F286F015D5A708C9 
 {
 	union
@@ -3577,10 +3576,8 @@ struct __StaticArrayInitTypeSizeU3D10_tE95261BAB1CBAAC65C6AEDB8F286F015D5A708C9
 		uint8_t __StaticArrayInitTypeSizeU3D10_tE95261BAB1CBAAC65C6AEDB8F286F015D5A708C9__padding[10];
 	};
 };
-#pragma pack(pop, tp)
 
 // <PrivateImplementationDetails>/__StaticArrayInitTypeSize=123
-#pragma pack(push, tp, 1)
 struct __StaticArrayInitTypeSizeU3D123_tECEB7048108BD58F631109B1119357F22EA142F2 
 {
 	union
@@ -3594,7 +3591,6 @@ struct __StaticArrayInitTypeSizeU3D123_tECEB7048108BD58F631109B1119357F22EA142F2
 		uint8_t __StaticArrayInitTypeSizeU3D123_tECEB7048108BD58F631109B1119357F22EA142F2__padding[123];
 	};
 };
-#pragma pack(pop, tp)
 
 // System.Net.HttpWebRequest/AuthorizationState
 struct AuthorizationState_t79311A9A938E608B506F10F92C0789E46C8FCA32 

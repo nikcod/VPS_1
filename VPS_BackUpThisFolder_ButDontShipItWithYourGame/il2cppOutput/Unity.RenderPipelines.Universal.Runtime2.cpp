@@ -8333,10 +8333,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector2Int__ctor_mC20D131213
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UniversalRenderPipelineAsset_ValidateRenderScale_m970DAA0A6B4B512B86D964C8E015EB14B06FB87C (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, float ___value0, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::ValidatePerObjectLights(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAsset_ValidatePerObjectLights_mCE51C9EF5F24C30A57675EB2AE82F4C4614049DB (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, int32_t ___value0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::set_additionalLightsShadowResolutionTierLow(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_additionalLightsShadowResolutionTierLow_mC81357DB56D34D63D90EDD8C88839628858B815C (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, int32_t ___value0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::set_additionalLightsShadowResolutionTierHigh(System.Int32)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_additionalLightsShadowResolutionTierHigh_mAFE0532328839F34DE18FFCB03079EBFFD0A1206 (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, int32_t ___value0, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::get_additionalLightsShadowResolutionTierLow()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAsset_get_additionalLightsShadowResolutionTierLow_m85E0C63E17191106F40B61BD395BEEFDD934261F_inline (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::get_additionalLightsShadowResolutionTierMedium()
@@ -8347,8 +8343,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAs
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Max_mF5379E63D2BBAC76D090748695D833934F8AD051_inline (float ___a0, float ___b1, const RuntimeMethod* method) ;
 // System.Void System.ArgumentException::.ctor(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArgumentException__ctor_m026938A67AF9D36BB7ED27F80425D7194B514465 (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* __this, String_t* ___message0, const RuntimeMethod* method) ;
-// System.Void UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::set_cascadeBorder(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_cascadeBorder_mC2D3A4B6764C0018D925BE49D1CFD1F458E4F13C (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, float ___value0, const RuntimeMethod* method) ;
 // System.Single UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset::ValidateShadowBias(System.Single)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UniversalRenderPipelineAsset_ValidateShadowBias_mFDDECE8C6DC7A740C8CFE88614EC6C59DA398B30 (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, float ___value0, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Mathf::Clamp(System.Int32,System.Int32,System.Int32)
@@ -14956,10 +14950,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAsset_get_addi
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_additionalLightsShadowResolutionTierLow_mC81357DB56D34D63D90EDD8C88839628858B815C (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, int32_t ___value0, const RuntimeMethod* method) 
 {
 	{
-		// internal set { additionalLightsShadowResolutionTierLow = value; }
+		// internal set { m_AdditionalLightsShadowResolutionTierLow = value; }
 		int32_t L_0 = ___value0;
-		UniversalRenderPipelineAsset_set_additionalLightsShadowResolutionTierLow_mC81357DB56D34D63D90EDD8C88839628858B815C(__this, L_0, NULL);
-		// internal set { additionalLightsShadowResolutionTierLow = value; }
+		__this->___m_AdditionalLightsShadowResolutionTierLow_30 = L_0;
+		// internal set { m_AdditionalLightsShadowResolutionTierLow = value; }
 		return;
 	}
 }
@@ -14996,10 +14990,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UniversalRenderPipelineAsset_get_addi
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_additionalLightsShadowResolutionTierHigh_mAFE0532328839F34DE18FFCB03079EBFFD0A1206 (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, int32_t ___value0, const RuntimeMethod* method) 
 {
 	{
-		// internal set { additionalLightsShadowResolutionTierHigh = value; }
+		// internal set { m_AdditionalLightsShadowResolutionTierHigh = value; }
 		int32_t L_0 = ___value0;
-		UniversalRenderPipelineAsset_set_additionalLightsShadowResolutionTierHigh_mAFE0532328839F34DE18FFCB03079EBFFD0A1206(__this, L_0, NULL);
-		// internal set { additionalLightsShadowResolutionTierHigh = value; }
+		__this->___m_AdditionalLightsShadowResolutionTierHigh_32 = L_0;
+		// internal set { m_AdditionalLightsShadowResolutionTierHigh = value; }
 		return;
 	}
 }
@@ -15263,10 +15257,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float UniversalRenderPipelineAsset_get_cascad
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UniversalRenderPipelineAsset_set_cascadeBorder_mC2D3A4B6764C0018D925BE49D1CFD1F458E4F13C (UniversalRenderPipelineAsset_tE8A9AA6F030CC3B558CEA2EB54FFF4FC58CA6232* __this, float ___value0, const RuntimeMethod* method) 
 {
 	{
-		// set { cascadeBorder = value; }
+		// set { m_CascadeBorder = value; }
 		float L_0 = ___value0;
-		UniversalRenderPipelineAsset_set_cascadeBorder_mC2D3A4B6764C0018D925BE49D1CFD1F458E4F13C(__this, L_0, NULL);
-		// set { cascadeBorder = value; }
+		__this->___m_CascadeBorder_40 = L_0;
+		// set { m_CascadeBorder = value; }
 		return;
 	}
 }

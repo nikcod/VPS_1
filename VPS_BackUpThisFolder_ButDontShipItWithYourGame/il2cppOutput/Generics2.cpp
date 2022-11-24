@@ -136,6 +136,8 @@ struct InvokerActionInvoker2<T1*, T2*>
 	}
 };
 
+// Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs>
+struct ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727;
 // Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.AR.ARSessionEventArgs.CameraTrackingStateChangedArgs>
 struct ArdkEventHandler_1_tC8575F6DA68B7DAF25415D0E3CEF2B95266CCB69;
 // Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.Experimental.ARDK.SharedAR.ColocalizationStateUpdatedArgs>
@@ -609,6 +611,7 @@ struct _TypeDeserializationContext_tC96C9598090EBDD64977D7368D25182A219E53DE;
 // Niantic.ARDK.Utilities.BinarySerialization.Contexts._TypeSerializationContext
 struct _TypeSerializationContext_t4B72B95994C3FEFA286B8E05E75B1A23D4E42208;
 
+IL2CPP_EXTERN_C RuntimeClass* AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* BooleanSerializer_t49B39A6ED5B1F8A2C6946E84A0BD052825368EEA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* CameraTrackingStateChangedArgs_tC2922211D7109887F764F89E69214E2A09E5035C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ColocalizationStateUpdatedArgs_tE81F8274EDC7629D8BB6E524EB15E5411ACC1D65_il2cpp_TypeInfo_var;
@@ -2779,6 +2782,23 @@ struct TlsOverPerCoreLockedStacksArrayPool_1_t75E187DD86278717F6AF0E6C1ED4783711
 	ObjectU5BU5DU5BU5D_t6491927494F825352C40DCE9D447C97B17297969* ___t_tlsBuckets_3;
 };
 
+// Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs
+struct AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 
+{
+	// Niantic.ARDK.Networking.IMultipeerNetworking Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs::Networking
+	RuntimeObject* ___Networking_0;
+};
+// Native definition for P/Invoke marshalling of Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs
+struct AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2_marshaled_pinvoke
+{
+	RuntimeObject* ___Networking_0;
+};
+// Native definition for COM marshalling of Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs
+struct AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2_marshaled_com
+{
+	RuntimeObject* ___Networking_0;
+};
+
 // Niantic.ARDK.Utilities.BinarySerialization.BinaryDeserializer
 struct BinaryDeserializer_t24675039602523794BE4E4ADFFFC26F66145F0C1  : public BinarySerializerOrDeserializer_t5F6BEAD0DE782725DFC40A46B18AABC8EAA379A7
 {
@@ -4027,6 +4047,11 @@ struct Type_t_StaticFields
 	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterName_5;
 	// System.Reflection.MemberFilter System.Type::FilterNameIgnoreCase
 	MemberFilter_tF644F1AE82F611B677CE1964D5A3277DDA21D553* ___FilterNameIgnoreCase_6;
+};
+
+// Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs>
+struct ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727  : public MulticastDelegate_t
+{
 };
 
 // Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.AR.ARSessionEventArgs.CameraTrackingStateChangedArgs>
@@ -5944,6 +5969,102 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void IntrospectiveSortUtilities_ThrowOrIgnore
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InvalidOperationException__ctor_m63F5561BE647F655D22C8289E53A5D3A2196B668 (InvalidOperationException_t5DDE4D49B7405FAAB1E4576F4715A42A3FAD4BAB* __this, String_t* ___message0, Exception_t* ___innerException1, const RuntimeMethod* method) ;
 // System.Int32 System.Collections.Generic.IntrospectiveSortUtilities::FloorLog2PlusOne(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t IntrospectiveSortUtilities_FloorLog2PlusOne_m33AC60574EC2B80A3B7084361A3736D4CFE91F6D (int32_t ___n0, const RuntimeMethod* method) ;
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+void ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_Multicast(ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, const RuntimeMethod* method)
+{
+	il2cpp_array_size_t length = __this->___delegates_13->max_length;
+	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates_13->GetAddressAtUnchecked(0));
+	for (il2cpp_array_size_t i = 0; i < length; i++)
+	{
+		ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* currentDelegate = reinterpret_cast<ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2, const RuntimeMethod*);
+		((FunctionPointerType)currentDelegate->___invoke_impl_1)((Il2CppObject*)currentDelegate->___method_code_6, ___args0, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method_3));
+	}
+}
+void ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_OpenInst(ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___args0, method);
+}
+void ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_OpenStatic(ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, const RuntimeMethod* method)
+{
+	typedef void (*FunctionPointerType) (AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2, const RuntimeMethod*);
+	((FunctionPointerType)__this->___method_ptr_0)(___args0, method);
+}
+void ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_OpenStaticInvoker(ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, const RuntimeMethod* method)
+{
+	InvokerActionInvoker1< AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 >::Invoke(__this->___method_ptr_0, method, NULL, ___args0);
+}
+void ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_ClosedStaticInvoker(ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, const RuntimeMethod* method)
+{
+	InvokerActionInvoker2< RuntimeObject*, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 >::Invoke(__this->___method_ptr_0, method, NULL, __this->___m_target_2, ___args0);
+}
+// System.Void Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs>::.ctor(System.Object,System.IntPtr)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArdkEventHandler_1__ctor_m9FB2DC8CD3B72FE727B2855A1C3D4E0DE63CBDC0_gshared (ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, RuntimeObject* ___object0, intptr_t ___method1, const RuntimeMethod* method) 
+{
+	__this->___method_ptr_0 = il2cpp_codegen_get_virtual_call_method_pointer((RuntimeMethod*)___method1);
+	__this->___method_3 = ___method1;
+	__this->___m_target_2 = ___object0;
+	Il2CppCodeGenWriteBarrier((void**)(&__this->___m_target_2), (void*)___object0);
+	int parameterCount = il2cpp_codegen_method_parameter_count((RuntimeMethod*)___method1);
+	__this->___method_code_6 = (intptr_t)__this;
+	if (MethodIsStatic((RuntimeMethod*)___method1))
+	{
+		bool isOpen = parameterCount == 1;
+		if (il2cpp_codegen_call_method_via_invoker((RuntimeMethod*)___method1))
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_OpenStaticInvoker;
+			else
+				__this->___invoke_impl_1 = (intptr_t)&ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_ClosedStaticInvoker;
+		else
+			if (isOpen)
+				__this->___invoke_impl_1 = (intptr_t)&ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_OpenStatic;
+			else
+				{
+					__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+					__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+				}
+	}
+	else
+	{
+		if (___object0 == NULL)
+			il2cpp_codegen_raise_exception(il2cpp_codegen_get_argument_exception(NULL, "Delegate to an instance method cannot have null 'this'."), NULL);
+		__this->___invoke_impl_1 = (intptr_t)__this->___method_ptr_0;
+		__this->___method_code_6 = (intptr_t)__this->___m_target_2;
+	}
+	__this->___extra_arg_5 = (intptr_t)&ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_Multicast;
+}
+// System.Void Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs>::Invoke(TArgs)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArdkEventHandler_1_Invoke_m3596A347869CD7FA98FD8B5CE25987B2B31E9474_gshared (ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, const RuntimeMethod* method) 
+{
+	typedef void (*FunctionPointerType) (RuntimeObject*, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2, const RuntimeMethod*);
+	((FunctionPointerType)__this->___invoke_impl_1)((Il2CppObject*)__this->___method_code_6, ___args0, reinterpret_cast<RuntimeMethod*>(__this->___method_3));
+}
+// System.IAsyncResult Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs>::BeginInvoke(TArgs,System.AsyncCallback,System.Object)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ArdkEventHandler_1_BeginInvoke_m9A473FE89DE040F5EB3E66872DBFFCE1A791667B_gshared (ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2 ___args0, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___callback1, RuntimeObject* ___object2, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	void *__d_args[2] = {0};
+	__d_args[0] = Box(AnyMultipeerNetworkingInitializedArgs_t9E508F81618E02A064E5D69F39BF65F0C3E38FB2_il2cpp_TypeInfo_var, &___args0);
+	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___callback1, (RuntimeObject*)___object2);
+}
+// System.Void Niantic.ARDK.Utilities.ArdkEventHandler`1<Niantic.ARDK.Networking.MultipeerNetworkingEventArgs.AnyMultipeerNetworkingInitializedArgs>::EndInvoke(System.IAsyncResult)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ArdkEventHandler_1_EndInvoke_m9BC6F4C693111A96A415CA657904F19B979B8BA7_gshared (ArdkEventHandler_1_t17C57C9C29B15D9C3CBAF0C45B393803EF87B727* __this, RuntimeObject* ___result0, const RuntimeMethod* method) 
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

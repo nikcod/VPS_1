@@ -222,6 +222,8 @@ struct EntryU5BU5D_tBE5544E46E7462C4C93E03813BB6EFE6C6B6369B;
 struct EntryU5BU5D_tF0B8798E4A94690E2359CC803D10FBC5690F8991;
 // System.Collections.Generic.Dictionary`2/Entry<UnityEngine.RenderTextureFormat,System.Boolean>[]
 struct EntryU5BU5D_t30D46D1EF4DAE4996BBE9E2101F11BB4DB61C0CC;
+// System.ValueTuple`2<UnityEngine.Rendering.VolumeParameter,UnityEngine.Rendering.VolumeParameter>[]
+struct ValueTuple_2U5BU5D_tE2E90A16702AA41094A74222F01C7F383CC57377;
 // UnityEngine.Experimental.Rendering.GraphicsFormat[][]
 struct GraphicsFormatU5BU5DU5BU5D_t1424BD937A890524D2A66FF39E61DEB0F10FE0A2;
 // System.Int32[][]
@@ -2106,6 +2108,10 @@ struct VolumeStack_t5DE94743BDB63D97EF5587DBDAE46468233F36E8  : public RuntimeOb
 {
 	// System.Collections.Generic.Dictionary`2<System.Type,UnityEngine.Rendering.VolumeComponent> UnityEngine.Rendering.VolumeStack::components
 	Dictionary_2_t5A7CE09F4D3EC74EEAE8DB41E209394AF6D9C99A* ___components_0;
+	// System.ValueTuple`2<UnityEngine.Rendering.VolumeParameter,UnityEngine.Rendering.VolumeParameter>[] UnityEngine.Rendering.VolumeStack::defaultParameters
+	ValueTuple_2U5BU5D_tE2E90A16702AA41094A74222F01C7F383CC57377* ___defaultParameters_1;
+	// System.Boolean UnityEngine.Rendering.VolumeStack::requiresReset
+	bool ___requiresReset_2;
 };
 
 // UnityEngine.Rendering.Universal.XRSystem
@@ -31634,7 +31640,7 @@ FINALLY_0190:
 
 IL_0058_1:
 			{
-				G_B5_0 = ((int32_t)32);
+				G_B5_0 = ((int32_t)24);
 				G_B5_1 = G_B4_0;
 			}
 
@@ -31791,7 +31797,7 @@ IL_0169_1:
 				// depthDescriptor.colorFormat = RenderTextureFormat.Depth;
 				RenderTextureDescriptor_set_colorFormat_m61B0FA4FCDE8A0F8A843DD6BF74097C21021C4FE((&V_5), 1, NULL);
 				// depthDescriptor.depthBufferBits = k_DepthStencilBufferBits;
-				RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&V_5), ((int32_t)32), NULL);
+				RenderTextureDescriptor_set_depthBufferBits_mA3710C0D6E485BA6465B328CD8B1954F0E4C5819((&V_5), ((int32_t)24), NULL);
 				// cmd.GetTemporaryRT(m_ActiveCameraDepthAttachment.id, depthDescriptor, FilterMode.Point);
 				CommandBuffer_tB56007DC84EF56296C325EC32DD12AC1E3DC91F7* L_48 = V_0;
 				RenderTargetHandle_tB5C2670041BF377223D41FDF9290F6D8BFB7BA66* L_49 = (&__this->___m_ActiveCameraDepthAttachment_69);
